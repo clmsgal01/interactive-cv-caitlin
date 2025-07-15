@@ -2,7 +2,9 @@
   <div class="layout">
     <NavBar />
     <main class="content">
-      <router-view />
+      <div id="app">
+        <router-view />
+      </div>
     </main>
     <FooterBar />
   </div>
@@ -20,20 +22,27 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden; /* prevent horizontal scroll bar from rogue 100vw */
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .content {
-  flex: 1;
+  flex-grow: 1; /* Take remaining space so footer is pushed down */
   width: 100%;
+  overflow-x: hidden;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto; /* center horizontally */
   padding: 2rem 2.5rem;
-  margin-top: 60px; /* adjust to match your fixed navbar height */
   box-sizing: border-box;
 }
 </style>

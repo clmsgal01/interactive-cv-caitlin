@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar">
     <div class="nav-left">
-      <span class="logo">Caitlin<span class="logo-highlight">.dev</span></span>
+      <span class="logo">
+        Caitlin<span class="logo-highlight">.dev</span>
+      </span>
     </div>
     <ul class="nav-links">
       <li><router-link to="/" exact>Home</router-link></li>
@@ -33,18 +35,37 @@
   box-sizing: border-box;
 }
 
-
 .logo {
-  font-weight: 700;
-  font-size: 1.75rem;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: 1.6px;
   color: #f0f0f0;
-  letter-spacing: 1.5px;
   user-select: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .logo-highlight {
-  color: #f5a623; /* golden accent */
   font-style: italic;
+  background: linear-gradient(
+    135deg,
+    #f5a623 25%,
+    #fffacd 40%,
+    #f5a623 55%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-badge 3s linear infinite;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes shimmer-badge {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -200% 0%;
+  }
 }
 
 .nav-links {
@@ -57,7 +78,7 @@
 
 .nav-links a {
   position: relative;
-  color: #cfd8dc; /* light gray-blue */
+  color: #cfd8dc;
   font-weight: 600;
   text-decoration: none;
   padding-bottom: 4px;
@@ -82,6 +103,7 @@
 
 .nav-links a:hover::after {
   width: 100%;
+  box-shadow: 0 0 6px 2px rgba(245, 166, 35, 0.4);
 }
 
 .router-link-exact-active {

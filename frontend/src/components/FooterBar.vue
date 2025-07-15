@@ -4,21 +4,19 @@
   </footer>
 </template>
 
-<style>
+<style scoped>
 .footer {
   position: relative;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding: 1rem 0; /* remove horizontal padding, or handle carefully */
+  left: 50%;
+  margin-left: -50vw;
+  padding: 1rem 2.5rem;
   background-color: #1e2633;
   border-top: 3px solid #c43e1a;
   color: #cfd8dc;
   text-align: center;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
   flex-shrink: 0;
 }
-
 </style>
