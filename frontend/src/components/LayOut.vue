@@ -2,9 +2,9 @@
   <div class="layout">
     <NavBar />
     <main class="content">
-      <div id="app">
-        <router-view />
-      </div>
+      <transition name="fade" mode="out-in">
+        <router-view :key="$route.fullPath" />
+      </transition>
     </main>
     <FooterBar />
   </div>
@@ -23,26 +23,30 @@ export default {
 </script>
 
 <style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .content {
-  flex-grow: 1; /* Take remaining space so footer is pushed down */
-  width: 100%;
-  overflow-x: hidden;
-}
-
-#app {
+  flex-grow: 1;
   max-width: 1280px;
-  margin: 0 auto; /* center horizontally */
-  padding: 2rem 2.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
   box-sizing: border-box;
 }
 </style>
