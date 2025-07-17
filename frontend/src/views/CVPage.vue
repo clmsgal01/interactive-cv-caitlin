@@ -21,19 +21,34 @@ export default {
     return {
       timelineData: [
         {
-          title: 'Student Intake – Belfast Met',
-          date: 'July 2025',
-          description: 'Helped coordinate and support new student enrolments, providing admin and technical assistance.',
+          title: 'Supervisor – Cardfactory',
+          date: 'September 2023 - Present',
+          description: 'Led a team to deliver excellent customer service and efficient store operations, handling money and boosting sales.',
         },
         {
-          title: 'Freelance Web Designer',
-          date: '2023 – Present',
-          description: 'Designed and developed modern, accessible websites for small businesses and creatives.',
+          title: 'First Class BSc Hons Application and Cloud Development with Data Science (Open University)',
+          date: '2025',
+          description: 'Graduated top of my class mastering application development, cloud computing, and data science fundamentals.',
         },
         {
-          title: 'BA (Hons) Digital Media',
-          date: '2021 – 2025',
-          description: 'Studied full-stack development, digital storytelling, UX, and interactive design.',
+          title: 'Civil Service Admin Officer',
+          date: 'July 2023 - September 2024',
+          description: 'Provided efficient administrative support and streamlined office workflows within a fast-paced government environment.',
+        },
+        {
+          title: 'Boojum Supervisor',
+          date: 'November 2023 - July 2024',
+          description: 'Managed daily operations and a team to deliver top-notch customer experiences in a busy food service setting.',
+        },
+        {
+          title: 'Associate Bachelor’s Degree with BSc Software Engineering (Ulster, Merit)',
+          date: 'September 2020 - September 2023',
+          description: 'Achieved a Merit in software engineering through a rigorous degree focused on practical coding skills. Left due to COVID.',
+        },
+        {
+          title: 'Stiona LTD Junior Developer Placement',
+          date: 'July 2022 - July 2023',
+          description: 'Developed dynamic web applications using Vue.js and collaborated in an agile team environment during an immersive placement.',
         },
       ],
     };
